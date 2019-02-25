@@ -6,7 +6,7 @@ import { getTodos } from '../actions'
 class App extends Component {
     
     componentDidMount(){
-        this.props.dispatch(getTodos())
+        this.props.dispatchGetTodos()
     }
 
     render(){
@@ -25,10 +25,18 @@ class App extends Component {
     }
 }
 
+function mapDispatchToProps(dispatch) {
+    return {
+        dispatchGetTodos: () => dispatch(getTodos())
+    }
+
+}
+
 function mapStateToProps(state) {
+
     return {
         todos: state.todos
     }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
