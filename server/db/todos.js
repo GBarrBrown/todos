@@ -12,10 +12,10 @@ function getTodos(testDb) {
     return db('todos')
 }
 
-function createTodo(todo, testDb) {
+function createTodo(newTodo, testDb) {
     const db = testDb || connection
 
-    return db('todos').insert(todo)
+    return db('todos').insert(newTodo)
 }
 
 function getTodosByPriority(priority, testDb) {
