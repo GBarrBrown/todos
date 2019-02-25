@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 
+import Header from '../components/Header'
+
 import { getTodos } from '../actions'
 
 class App extends Component {
@@ -12,7 +14,7 @@ class App extends Component {
     render(){
         return (
             <div>
-                <h1>TODOS</h1>
+                <Header />
                 <ul>
                     {this.props.todos.map((item) => {
                         return (
