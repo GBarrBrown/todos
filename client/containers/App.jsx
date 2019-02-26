@@ -1,9 +1,10 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Header from '../components/Header'
+import List from '../containers/List'
 
-import { getTodos } from '../actions'
+import { getTodos } from '../actions/index'
 
 class App extends Component {
     
@@ -15,13 +16,14 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <ul>
+                <List />
+                {/* <ul>
                     {this.props.todos.map((item) => {
                         return (
                             <li>{item.task}</li>
                         )
                     })}
-                </ul>
+                </ul> */}
             </div>
             )
     }

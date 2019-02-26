@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo');
+
 /* -------- Header -------- */
 .header-container {
     text-align: center;
+    font-family: 'Aleo', serif;
+
 }
 
 .header-title {
@@ -8,4 +12,17 @@
 }
 
 /* -------- List -------- */
+.tasks-container {
+    text-align: center;
+}
 
+.task-container {
+    text-align: left;
+    display: inline-block;
+    width: 50%;
+    margin: 20px;
+    padding:10px;
+    border-radius: 5px;
+    background-color: beige;
+
+}
